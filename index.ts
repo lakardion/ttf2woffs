@@ -15,7 +15,7 @@ type WriteWoffArgument = {
 const writeWoff2 = ({ destinationFileName, buffer }: WriteWoffArgument) => {
   const woff2FileBuffer = ttf2woff2(buffer);
   const woff2FilePromise = writeFile(
-    `./${destinationFileName}.${WOFF2_EXTENSION}`,
+    `./test-fonts/${destinationFileName}.${WOFF2_EXTENSION}`,
     woff2FileBuffer
   );
   return woff2FilePromise;
