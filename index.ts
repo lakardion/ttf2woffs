@@ -77,4 +77,4 @@ const optimizeFont = async (ttfFilePath: string) => {
 // --woff -w
 // --woff2 -w2
 // --outDir -o
-optimizeFont(`${myTTFFile}.${TTF_EXTENSION}`);
+optimizeFont(`./test-fonts/${myTTFFile}.${TTF_EXTENSION}`);
