@@ -59,13 +59,11 @@ export const optimizeFont = async ({
   for (const [idx, result] of conversionResult.entries()) {
     const current = woffPromisesArray[idx];
     if (result.status === "fulfilled") {
-      console.log(
-        `${pathDetails.name} - ✅ Convert to format ${current.format} successful`
-      );
+      console.log(`✅ - ${pathDetails.name} - ${current.format}`);
     }
     if (result.status === "rejected") {
       console.log(
-        `${pathDetails.name} - ❌ Error when converting the file to format ${current.format}`,
+        `❌ - ${pathDetails.name} - ${current.format} - Error when converting the file`,
         result.reason
       );
     }
@@ -90,7 +88,9 @@ export const optimizeFontsInFolder = async ({
       const isDirectory = f.isDirectory();
       isDirectory &&
         console.log(
-          `🟡 ${f.name} is a directory so it won't be processed, ${f.isFile()}`
+          `🟡 - ${
+            f.name
+          } is a directory so it won't be processed, ${f.isFile()}`
         );
       return !isDirectory;
     })
