@@ -3,7 +3,7 @@
   "description": "Utility for optimizing TTF fonts to woff/woff2 formats",
   "author": "lakardion",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
