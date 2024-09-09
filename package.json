@@ -1,13 +1,18 @@
 {
   "name": "ttf2woffs",
+  "description": "Utility for optimizing TTF fonts to woff/woff2 formats",
+  "author": "lakardion",
+  "license": "MIT",
+  "version": "0.0.2",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "bin": {
     "ttf2woffs": "dist/index.js"
   },
   "scripts": {
     "start": "nodemon",
-    "build": "tsup index.ts --format esm --dts"
+    "build": "tsup src/index.ts --format esm --dts"
   },
   "devDependencies": {
     "@types/node": "^18.0.5",
