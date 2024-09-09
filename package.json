@@ -1,9 +1,13 @@
 {
   "name": "ttf2woffs",
-  "main": "index.ts",
+  "main": "./dist/index.js",
   "type": "module",
+  "bin": {
+    "ttf2woffs": "dist/index.js"
+  },
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "build": "tsup index.ts --format esm --dts"
   },
   "devDependencies": {
     "@types/node": "^18.0.5",
@@ -11,9 +15,13 @@
     "dotenv": "^16.3.1",
     "nodemon": "^2.0.19",
     "ts-node": "^10.9.1",
+    "tsc": "^2.0.4",
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "commander": "^12.1.0",
+    "npm": "^10.8.3",
+    "tsup": "^8.2.4",
     "ttf2woff": "^3.0.0",
     "ttf2woff2": "^6.0.1"
   }
